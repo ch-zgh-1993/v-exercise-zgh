@@ -1,3 +1,11 @@
+/*
+* @Author: Zhang Guohua
+* @Date:   2018-11-12 19:40:19
+* @Last Modified by:   zgh
+* @Last Modified time: 2018-11-13 19:31:52
+* @Description: create by zgh
+* @GitHub: Savour Humor
+*/
 'use strict'
 const path = require('path')
 const utils = require('./utils')
@@ -40,7 +48,7 @@ module.exports = {
   },
   module: {
     rules: [
-      ...(config.dev.useEslint ? [createLintingRule()] : []),
+      // ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
         loader: 'vue-loader',
