@@ -1,3 +1,11 @@
+/*
+* @Author: Zhang Guohua
+* @Date:   2018-11-12 19:40:19
+* @Last Modified by:   zgh
+* @Last Modified time: 2018-11-22 19:12:10
+* @Description: create by zgh
+* @GitHub: Savour Humor
+*/
 'use strict'
 const path = require('path')
 const config = require('../config')
@@ -37,7 +45,8 @@ exports.cssLoaders = function (options) {
       loaders.push({
         loader: loader + '-loader',
         options: Object.assign({}, loaderOptions, {
-          sourceMap: options.sourceMap
+          sourceMap: options.sourceMap,
+          javascriptEnabled: true
         })
       })
     }

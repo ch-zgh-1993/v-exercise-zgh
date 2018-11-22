@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-12 19:40:19
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-11-13 19:31:52
+* @Last Modified time: 2018-11-22 19:10:39
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -51,8 +51,19 @@ module.exports = {
       // ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: vueLoaderConfig
+
+        //  增加 iview-loader 配置
+        use: [
+          {
+            loader: 'vue-loader',
+            options: vueLoaderConfig
+          },{
+            loader: 'iview-loader',
+            options: {
+                prefix: false
+            }
+          }
+        ]
       },
       {
         test: /\.js$/,

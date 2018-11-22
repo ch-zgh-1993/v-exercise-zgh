@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-13 16:18:10
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-11-14 19:14:53
+* @Last Modified time: 2018-11-22 13:48:21
 * @Description: create by zgh
 * @GitHub: Savour Humor
 -->
@@ -17,16 +17,7 @@
 		name: 'Home',
 		data () {
 			return {
-				content: ''
-			}
-		},
-		watch: {
-			'$route' (to) {
-				if(to.name){
-					this.content = to.name;
-				}else{	
-					this.content = 'Router 进阶教程练习'
-				}
+				content: 'Router 进阶教程练习'
 			}
 		}
 	}
