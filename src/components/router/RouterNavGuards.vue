@@ -2,14 +2,12 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-13 16:17:39
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-11-13 19:03:35
+* @Last Modified time: 2018-12-02 16:11:38
 * @Description: create by zgh
 * @GitHub: Savour Humor
 -->
 <template>
-	<div>
-		NavGuards
-	</div>
+	<p>Nav Guards(导航守卫)</p>
 </template>
 
 <script type="text/javascript">

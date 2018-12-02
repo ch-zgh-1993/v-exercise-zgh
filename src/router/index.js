@@ -2,16 +2,19 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-12 19:40:19
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-11-22 18:08:34
+* @Last Modified time: 2018-12-02 16:51:24
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import navGuards from '@/components/NavGuards'
-import GetData from '@/components/GetData'
-import Scroll from '@/components/Scroll'
+
+// Router
+import RouterHome from '@/components/router/RouterHome'
+import NavGuards from '@/components/router/RouterNavGuards'
+import GetData from '@/components/router/GetData'
+import Scroll from '@/components/router/Scroll'
 
 // iview
 // template render
@@ -24,7 +27,42 @@ const router = new Router({
     {
       path: '/',
       component: Home
-    },{
+    }, {
+      path: '/router',
+      components: {
+        default: Home,
+        router: RouterHome,
+      }, 
+      name: 'router',
+      children: [{
+        path: 'navGuards',
+        components: {
+          navguards: NavGuards
+        },
+        name: 'navguards'
+      }],
+    },
+
+    //  iview template/render 模式
+    {
+      path: '/iview/tr',
+      component: TemplateRender
+    }
+
+  ]
+});
+
+console.info(router);
+
+// 注册前置守卫
+router.beforeEach((to, from, next) => {
+  console.log(to);
+  next();
+})
+
+export default router
+
+/*{
       path: '/navGuards',
         components: {
           default: Home,
@@ -45,22 +83,4 @@ const router = new Router({
           navGuards: Scroll
         },
         name: 'Scroll'
-    },
-
-    //  iview template/render 模式
-    {
-      path: '/iview/tr',
-      component: TemplateRender
-    }
-  ]
-})
-
-console.info(router);
-
-// 注册前置守卫
-router.beforeEach((to, from, next) => {
-  console.log(to);
-  next();
-})
-
-export default router
+    },*/
