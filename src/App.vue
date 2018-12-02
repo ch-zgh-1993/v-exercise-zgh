@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-12 19:40:19
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-12-02 16:49:30
+* @Last Modified time: 2018-12-02 17:10:07
 * @Description: create by zgh
 * @GitHub: Savour Humor
 -->
@@ -30,11 +30,11 @@
                         <Icon type="ios-git-merge"></Icon>
                         导航守卫
                       </MenuItem>
-                      <MenuItem name="1-2" to="/GetData">
+                      <MenuItem name="1-2" to="/router/getData">
                         <Icon type="ios-git-merge"></Icon>
                         数据获取
                       </MenuItem>
-                      <MenuItem name="1-3" to="/Scroll">
+                      <MenuItem name="1-3" to="/router/scroll">
                         <Icon type="ios-git-merge"></Icon>
                         滚动行为
                       </MenuItem>
@@ -49,7 +49,6 @@
                   <Content :style="{padding: '24px', minHeight: '280px', background: '#fff'}">
                       <router-view class="index-content-default"/>
                       <router-view class="index-content-title" :name="level1 || '未命名1'" />
-                      <router-view class="index-content-content" :name="level2 || '未命名2'" />
                   </Content>
               </Layout>
             </Layout>
@@ -68,8 +67,7 @@ export default {
   name: 'App',
   data () {
     return {
-      level1: '',
-      level2: '',
+      level1: ''
     }
   },
   components: {
@@ -77,17 +75,8 @@ export default {
   },
   watch: {
     '$route' (to, from) {
-      console.log(to.matched.length)
-      switch(to.matched.length){
-        case 1:
-        console.log(111)
-          this.level1 = to.matched[0].name;
-          break;
-        case 2:
-        console.log(222)
-          this.level1 = to.matched[0].name;
-          this.level2 = to.matched[1].name;
-          break;
+      if(to.matched.length > 0){
+        this.level1 = to.matched[0].name;
       }
     } 
   },
@@ -123,6 +112,10 @@ export default {
 .index-content-default {
   margin: 20px;
   color: green;
+}
+.index-content-title {
+  margin: 20px;
+  color: orange;
 }
 
 .index-content {

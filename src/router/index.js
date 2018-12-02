@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-12 19:40:19
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-12-02 16:51:24
+* @Last Modified time: 2018-12-02 17:06:29
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -13,8 +13,8 @@ import Home from '@/components/Home'
 // Router
 import RouterHome from '@/components/router/RouterHome'
 import NavGuards from '@/components/router/RouterNavGuards'
-import GetData from '@/components/router/GetData'
-import Scroll from '@/components/router/Scroll'
+import GetData from '@/components/router/RouterGetData'
+import Scroll from '@/components/router/RouterScroll'
 
 // iview
 // template render
@@ -36,10 +36,16 @@ const router = new Router({
       name: 'router',
       children: [{
         path: 'navGuards',
-        components: {
-          navguards: NavGuards
-        },
+        component: NavGuards,
         name: 'navguards'
+      }, {
+        path: 'getData',
+        component: GetData,
+        name: 'getData',
+      }, {
+        path: 'scroll',
+        component: Scroll,
+        name: 'scroll'
       }],
     },
 
@@ -60,27 +66,4 @@ router.beforeEach((to, from, next) => {
   next();
 })
 
-export default router
-
-/*{
-      path: '/navGuards',
-        components: {
-          default: Home,
-          navGuards: navGuards
-        },
-        name: 'navGuards'
-    },{
-      path: '/GetData',
-        components: {
-          default: Home,
-          navGuards: GetData
-        },
-        name: 'GetData'
-    },{
-      path: '/Scroll',
-        components: {
-          default: Home,
-          navGuards: Scroll
-        },
-        name: 'Scroll'
-    },*/
+export default router;
