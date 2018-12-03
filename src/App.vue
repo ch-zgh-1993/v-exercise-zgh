@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-12 19:40:19
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-12-02 17:10:07
+* @Last Modified time: 2018-12-03 16:18:26
 * @Description: create by zgh
 * @GitHub: Savour Humor
 -->
@@ -14,35 +14,31 @@
             <HeaderZ></HeaderZ>
             <Layout>
               <Sider hide-trigger :style="{background: '#fff'}">
-                <Menu active-name="0" theme="light" width="auto" :open-names="['0']"
+                <Menu :active-name="0" theme="light" width="auto" :open-names="['0']"
                 
                 >
-                  <MenuItem name="0" to="/">
-                    <Icon type="ios-home"></Icon>
-                      Home
-                  </MenuItem>
-                  <Submenu name="1">
-                      <template slot="title">
-                          <Icon type="ios-jet"></Icon>
-                          Vue-Router
-                      </template>
-                      <MenuItem name="1-1" to="/router/navGuards">
-                        <Icon type="ios-git-merge"></Icon>
-                        导航守卫
+                  <template v-for="(item, i) in menuList">
+                    <template v-if="typeof item.sub !== 'undefined'">
+                      <Submenu :name="i + ''">
+                        <template slot="title">
+                          <Icon :type="item.icon || 'ios-git-merge'"></Icon>
+                          {{ item.title }}
+                        </template>
+                          <template v-for="(key, j) in item.sub">
+                            <MenuItem :name="i + '-' + j" :to="key.link">
+                              <Icon :type="key.icon || 'ios-git-merge'"></Icon>
+                              {{ key.title }}
+                            </MenuItem>
+                          </template>
+                      </Submenu>
+                    </template>
+                    <template v-else>
+                      <MenuItem :name="i" :to="item.link">
+                        <Icon :type="item.icon || 'ios-git-merge'"></Icon>
+                          {{ item.title }}
                       </MenuItem>
-                      <MenuItem name="1-2" to="/router/getData">
-                        <Icon type="ios-git-merge"></Icon>
-                        数据获取
-                      </MenuItem>
-                      <MenuItem name="1-3" to="/router/scroll">
-                        <Icon type="ios-git-merge"></Icon>
-                        滚动行为
-                      </MenuItem>
-                  </Submenu>
-                  <MenuItem name="2" to="/iview/tr">
-                    <Icon type="ios-git-merge"></Icon>
-                      iview 示例
-                  </MenuItem>
+                    </template>
+                  </template>
                 </Menu>
               </Sider>
               <Layout :style="{padding: '0 24px 24px'}">
@@ -61,13 +57,15 @@
 // 菜单目录，建议是动态生成的，这样有利于维护，修改，和根据权限做处理。这里的方法不建议使用。
 // 
 
-import HeaderZ from '@/components/common/HeaderZ'
+import HeaderZ from '@/components/common/HeaderZ';
+import List from '@/assets/js/list';
 
 export default {
   name: 'App',
   data () {
     return {
-      level1: ''
+      level1: '',
+      menuList: List.menulist
     }
   },
   components: {

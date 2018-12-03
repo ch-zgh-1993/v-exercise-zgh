@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-12 19:40:19
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-12-02 15:45:44
+* @Last Modified time: 2018-12-03 16:36:07
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -18,16 +18,23 @@ vue program level exercise.
 ## default
 > vue program exercise。主要是一些常用插件：如 vue-router, vuex, vue-loader, webpack 在其中的使用. 
 > 
-## vue-router
+## vue-router 相关
 1. 导航守卫及使用
 
 ### router 常见问题
 1. 基础部分
     1. 命名视图.
         1. 在 children 中，一定不要加 <del>/email</del>, 会被作为根路径。
+        2. 视图也是嵌套的，即组件中也可以有视图，在路由中通过嵌套路由体现。即，不是所有的路由，都在根 vue 组件上。你可以通过不断嵌套实现复杂布局。之前错误的以为，路由嵌套，但视图都要在 vue 根实例上渲染，这样就没什么意义了。
+
+## vuex 相关内容
+### vuex 基础内容相关练习 (test_base)
+1. 表单处理练习: 
+    1. vuex 时， v-model 的两种使用方式。
 
 ## vue + iview (具体一些问题，可以见其他项目总结，或者iview框架总结)
 1. 使用 template/render 进行渲染。
 2. 使用 iview-loader 
 3. 使用 主题定制
     1.  使用主题定制时，引入less后，不需要在 webpack.base.config 中进行配置，因为在 vue 已经在 utils 中配置过了。如果再次配置，运行将会出现错误。这配置在网上的博客中经常出现，但还是不幸的是，这是错误的方法。 会提示，不是一个模块。
+

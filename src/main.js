@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-12 19:40:19
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-12-02 15:01:06
+* @Last Modified time: 2018-12-03 11:17:00
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -11,6 +11,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
+// 引入 vuex
+import store from './store/index';
 
 //  引入 iview
 import iView from 'iview'
@@ -45,10 +48,11 @@ Vue.use(iView);
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
+// 初始化 App
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
-  template: '<App/>'
-})
+  template: '<App/>',
+});
