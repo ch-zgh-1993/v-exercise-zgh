@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-12-03 11:18:34
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-12-03 20:27:41
+* @Last Modified time: 2018-12-11 14:46:25
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -24,6 +24,7 @@ import ComponentParse from '@/components/iview/ComponentParse'
 // vuex 相关
 import VuexHome from '@/components/vuex/VuexHome';
 import BaseForm from '@/components/vuex/test_base/BaseForm';
+import KeyKnown from '@/components/vuex/核心概念理解/state';
 
 // 路由列表定义
 const routerlist = [{
@@ -66,6 +67,10 @@ const routerlist = [{
 		path: 'base_form',
 		component: BaseForm,
 		name: 'base_form',
+	}, {
+		path: 'key_known',
+		component: KeyKnown,
+		name: 'key_known',
 	}]
 },
 
@@ -111,6 +116,9 @@ const menulist = [{
 	sub: [{
 		title: 'Form练习',
 		link: '/vuex/base_form'
+	}, {
+		title: '核心概念理解',
+		link: '/vuex/key_known'
 	}]
 }, {
 	title: 'iview 示例',

@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-12 19:40:19
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-12-03 16:36:07
+* @Last Modified time: 2018-12-11 14:50:54
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -31,6 +31,9 @@ vue program level exercise.
 ### vuex 基础内容相关练习 (test_base)
 1. 表单处理练习: 
     1. vuex 时， v-model 的两种使用方式。
+2. 核心概念更多尝试：
+    1. state:
+        1. 响应到哪种程度。
 
 ## vue + iview (具体一些问题，可以见其他项目总结，或者iview框架总结)
 1. 使用 template/render 进行渲染。
