@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-12 19:40:19
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-12-03 11:17:00
+* @Last Modified time: 2019-01-16 17:10:15
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -38,12 +38,16 @@ import iView from 'iview'
 //	最后分析来分析去，只能是 webpack 没有将 t 当成一个模块。
 //	规则删掉，ok。
 import './zgh-theme/index.less'
-
 // // 国际化
 // import locale from 'iview/dist/locale/en-US';
 // Vue.use(iView, { locale });
 // iview 全局配置
 Vue.use(iView);
+
+// 引入 element
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 
 
 Vue.config.productionTip = false

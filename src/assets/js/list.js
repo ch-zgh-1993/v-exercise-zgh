@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-12-03 11:18:34
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-12-11 14:46:25
+* @Last Modified time: 2019-01-16 17:53:22
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -26,6 +26,10 @@ import VuexHome from '@/components/vuex/VuexHome';
 import BaseForm from '@/components/vuex/test_base/BaseForm';
 import KeyKnown from '@/components/vuex/核心概念理解/state';
 
+// 代码块
+import BlockHome from '@/components/block/BlockHome';
+import DataStream from '@/components/block/DataStream';
+
 // 路由列表定义
 const routerlist = [{
   path: '/',
@@ -43,7 +47,7 @@ const routerlist = [{
   children: [{
     path: 'navGuards',
     component: NavGuards,
-    name: 'navguards'
+    name: 'navguards',
   }, {
     path: 'getData',
     component: GetData,
@@ -51,7 +55,7 @@ const routerlist = [{
   }, {
     path: 'scroll',
     component: Scroll,
-    name: 'scroll'
+    name: 'scroll',
   }],
 }, 
 
@@ -92,6 +96,21 @@ const routerlist = [{
 		path: 'component_parse',
 		name: 'component_parse',
 	}]
+}, 
+
+// 小代码块:
+{
+	path: '/block',
+	components: {
+		default: Home,
+		block: BlockHome,
+	},
+	name: 'block',
+	childrend: [{
+		path: 'data_stream',
+		name: 'data_stream',
+		component: DataStream,
+	}],
 }];
 
 // 菜单列表
@@ -128,6 +147,12 @@ const menulist = [{
 	}, {
 		title: '组件内容详解',
 		link: '/iview/component_parse',
+	}]
+}, {
+	title: '实用代码块',
+	sub: [{
+		title: '数据流',
+		link: '/block/data_stream',
 	}]
 }];
 
