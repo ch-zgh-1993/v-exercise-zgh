@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-12 19:40:19
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-12-11 14:50:54
+* @Last Modified time: 2019-01-21 17:36:37
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -40,4 +40,10 @@ vue program level exercise.
 2. 使用 iview-loader 
 3. 使用 主题定制
     1.  使用主题定制时，引入less后，不需要在 webpack.base.config 中进行配置，因为在 vue 已经在 utils 中配置过了。如果再次配置，运行将会出现错误。这配置在网上的博客中经常出现，但还是不幸的是，这是错误的方法。 会提示，不是一个模块。
+
+## 功能块示例
+1. 数据流。
+
+## es
+1. module.
 

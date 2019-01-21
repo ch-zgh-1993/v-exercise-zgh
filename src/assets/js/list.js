@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-12-03 11:18:34
 * @Last Modified by:   zgh
-* @Last Modified time: 2019-01-16 17:53:22
+* @Last Modified time: 2019-01-21 11:16:05
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -29,6 +29,10 @@ import KeyKnown from '@/components/vuex/核心概念理解/state';
 // 代码块
 import BlockHome from '@/components/block/BlockHome';
 import DataStream from '@/components/block/DataStream';
+
+// es
+import ESHome from '@/components/es/EsHome';
+import Module from '@/components/es/es6/Module';
 
 // 路由列表定义
 const routerlist = [{
@@ -106,10 +110,25 @@ const routerlist = [{
 		block: BlockHome,
 	},
 	name: 'block',
-	childrend: [{
+	children: [{
 		path: 'data_stream',
 		name: 'data_stream',
 		component: DataStream,
+	}],
+},
+
+// es 模块
+{
+	path: '/es',
+	components: {
+		default: Home,
+		es: ESHome,
+	},
+	name: 'es',
+	children: [{
+		path: 'es6/module',
+		name: 'es6/module',
+		component: Module,
 	}],
 }];
 
@@ -153,6 +172,12 @@ const menulist = [{
 	sub: [{
 		title: '数据流',
 		link: '/block/data_stream',
+	}]
+}, {
+	title: 'es模块',
+	sub: [{
+		title: 'ES6_module 模块',
+		link: '/es/es6/module',
 	}]
 }];
 
