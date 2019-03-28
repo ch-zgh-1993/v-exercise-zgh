@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2019-01-31 10:50:13
 * @Last Modified by:   zgh
-* @Last Modified time: 2019-01-31 10:50:20
+* @Last Modified time: 2019-02-28 17:16:08
 * @Description: create by zgh
 * @GitHub: Savour Humor
 -->
@@ -36,6 +36,7 @@ export default {
   padding-left: 8px;
 }
 .item-wrapper {
+  display: flex;
   margin-bottom: 20px;
 }
 </style>
