@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-12-11 13:35:38
 * @Last Modified by:   zgh
-* @Last Modified time: 2018-12-11 15:02:07
+* @Last Modified time: 2019-04-28 14:12:38
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -20,6 +20,12 @@ export default {
 		moreStates: {
 			name: 'test',
 		},
+		count: 1,
+	},
+	getters: {
+		addCount(state) {
+			return state.count+1;
+		}
 	},
 	mutations: {
 		updateMoreStates(state, paylod) {

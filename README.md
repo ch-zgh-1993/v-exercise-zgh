@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-12 19:40:19
 * @Last Modified by:   zgh
-* @Last Modified time: 2019-01-21 17:36:37
+* @Last Modified time: 2019-04-28 12:09:04
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -34,6 +34,7 @@ vue program level exercise.
 2. 核心概念更多尝试：
     1. state:
         1. 响应到哪种程度。
+    2. namespace 使用。
 
 ## vue + iview (具体一些问题，可以见其他项目总结，或者iview框架总结)
 1. 使用 template/render 进行渲染。
