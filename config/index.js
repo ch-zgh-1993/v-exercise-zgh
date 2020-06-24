@@ -1,3 +1,11 @@
+/*
+* @Author: Zhang Guohua
+* @Date:   2020-06-24 16:15:47
+* @Last Modified by:   zgh
+* @Last Modified time: 2020-06-24 16:16:06
+* @Description: create by zgh
+* @GitHub: Savour Humor
+*/
 'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.

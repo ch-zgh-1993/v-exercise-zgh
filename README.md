@@ -2,7 +2,7 @@
 * @Author: Zhang Guohua
 * @Date:   2018-11-12 19:40:19
 * @Last Modified by:   zgh
-* @Last Modified time: 2019-04-28 12:09:04
+* @Last Modified time: 2020-06-24 16:26:47
 * @Description: create by zgh
 * @GitHub: Savour Humor
 */
@@ -47,4 +47,13 @@ vue program level exercise.
 
 ## es
 1. module.
+
+
+
+
+
+## 报错
+
+- 文件路径找不到
+    + 查看 loader 是否安装， less, vue , url, iview 等。
 
